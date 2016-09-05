@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+       fx:id="root" stylesheets="/css/rootStyle.css" fx:controller="controller.InnsmouthMapController">
+
+    <ScrollPane fx:id="scrollPane" pannable="true">
+        <content>
+            <Group fx:id="group">
+                <StackPane fx:id="stackPane" alignment="TOP_LEFT"
+                           styleClass="innsmouthMapLabel">
+                    <Group fx:id="group2">
+                        <ImageView onScroll="#onScroll" fx:id="imgMap">
+                            <Image url="/innsmouth/innsmouthMap.jpg"/>
+                        </ImageView>
+
+                        <Label text="103" onMouseClicked="#loadImage"
+                               translateX="2770"
+                               translateY="1240">
+                            <tooltip>
+                                <Tooltip text="Verlassene Asbury-M.E.-Kirche"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="104" onMouseClicked="#loadImage"
+                               translateX="2900"
+                               translateY="1180">
+                            <tooltip>
+                                <Tooltip text="Denkmal für die Gefallenen des Unabhängikeitskrieges"/>
+                            </tooltip>
+                        </Label>
+
+                        <Label text="201" onMouseClicked="#loadImage"
+                               translateX="2720"
+                               translateY="1380">
+                            <tooltip>
+                                <Tooltip text="Alter Stadtplatz"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="202" onMouseClicked="#loadImage"
+                               translateX="2700"
+                               translateY="1230">
+                            <tooltip>
+                                <Tooltip text="Gefängnis"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="203" onMouseClicked="#loadImage"
+                               translateX="2550"
+                               translateY="1410">
+                            <tooltip>
+                                <Tooltip text="Dr. Rowley Marsh"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="204" onMouseClicked="#loadImage"
+                               translateX="2660"
+                               translateY="1060">
+                            <tooltip>
+                                <Tooltip text="Kirche St. John"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="205" onMouseClicked="#loadImage"
+                               translateX="2150"
+                               translateY="1380">
+                            <tooltip>
+                                <Tooltip text="Redaktion des Innsmouth-Couriers"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="206" onMouseClicked="#loadImage"
+                               translateX="2230"
+                               translateY="1430">
+                            <tooltip>
+                                <Tooltip text="Neuer Kirchplatz"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="207" onMouseClicked="#loadImage"
+                               translateX="2180"
+                               translateY="1300">
+                            <tooltip>
+                                <Tooltip text="Esoterischer Orden von Dagon"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="208" onMouseClicked="#loadImage"
+                               translateX="2320"
+                               translateY="1300">
+                            <tooltip>
+                                <Tooltip text="Kirche der Freien Gemeinde von Innsmouth"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="209" onMouseClicked="#loadImage"
+                               translateX="2610"
+                               translateY="1370">
+                            <tooltip>
+                                <Tooltip text="Schifffahrtsversicherung Rawes und Hogg"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="210" onMouseClicked="#loadImage"
+                               translateX="2550"
+                               translateY="1260">
+                            <tooltip>
+                                <Tooltip text="East India Marine Merchants Bank"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="211" onMouseClicked="#loadImage"
+                               translateX="2380"
+                               translateY="1260">
+                            <tooltip>
+                                <Tooltip text="Christchurch-Friedhof"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="212" onMouseClicked="#loadImage"
+                               translateX="2570"
+                               translateY="1090">
+                            <tooltip>
+                                <Tooltip text="Church Street-Friedhof"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="213" onMouseClicked="#loadImage"
+                               translateX="2560"
+                               translateY="990">
+                            <tooltip>
+                                <Tooltip text="Rathaus und Gemeindesaal"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="214" onMouseClicked="#loadImage"
+                               translateX="2200"
+                               translateY="1200">
+                            <tooltip>
+                                <Tooltip text="Babtistische Glaubensgemeinde"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="302" onMouseClicked="#loadImage"
+                               translateX="1760"
+                               translateY="960">
+                            <tooltip>
+                                <Tooltip text="Marsh-Villa"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="305" onMouseClicked="#loadImage"
+                               translateX="1530"
+                               translateY="1210">
+                            <tooltip>
+                                <Tooltip text="Thomas Waite"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="306" onMouseClicked="#loadImage"
+                               translateX="1550"
+                               translateY="1131">
+                            <tooltip>
+                                <Tooltip text="Warren Billingham"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="404" onMouseClicked="#loadImage"
+                               translateX="790"
+                               translateY="1170">
+                            <tooltip>
+                                <Tooltip text="Wasserturm"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="407" onMouseClicked="#loadImage"
+                               translateX="2670"
+                               translateY="210">
+                            <tooltip>
+                                <Tooltip text="Armenhaus"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="501" onMouseClicked="#loadImage"
+                               translateX="2360"
+                               translateY="1640">
+                            <tooltip>
+                                <Tooltip text="Marsh Refining Company"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="502" onMouseClicked="#loadImage"
+                               translateX="690"
+                               translateY="1440">
+                            <tooltip>
+                                <Tooltip text="Bahnhof"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="503" onMouseClicked="#loadImage"
+                               translateX="1850"
+                               translateY="1760">
+                            <tooltip>
+                                <Tooltip text="Feuerwache"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="506" onMouseClicked="#loadImage"
+                               translateX="1820"
+                               translateY="1650">
+                            <tooltip>
+                                <Tooltip text="Schadhafte Brücke"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="605" onMouseClicked="#loadImage"
+                               translateX="1600"
+                               translateY="2050">
+                            <tooltip>
+                                <Tooltip text="The Garden"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="609" onMouseClicked="#loadImage"
+                               translateX="3120"
+                               translateY="2640">
+                            <tooltip>
+                                <Tooltip text="Obed Marsh Denkmal"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="701" onMouseClicked="#loadImage"
+                               translateX="2140"
+                               translateY="1980">
+                            <tooltip>
+                                <Tooltip text="Neuer Stadtplatz"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="702" onMouseClicked="#loadImage"
+                               translateX="2060"
+                               translateY="2160">
+                            <tooltip>
+                                <Tooltip text="First National Store"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="703" onMouseClicked="#loadImage"
+                               translateX="2030"
+                               translateY="1980">
+                            <tooltip>
+                                <Tooltip text="Hotel Gilman House"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="704" onMouseClicked="#loadImage"
+                               translateX="2180"
+                               translateY="2180">
+                            <tooltip>
+                                <Tooltip text="Imbiss Innsmouth Cafè"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="705" onMouseClicked="#loadImage"
+                               translateX="2250"
+                               translateY="2230">
+                            <tooltip>
+                                <Tooltip text="Drogerie Eliot"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="706" onMouseClicked="#loadImage"
+                               translateX="2230"
+                               translateY="2070">
+                            <tooltip>
+                                <Tooltip text="Billingham's Seafood"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="707" onMouseClicked="#loadImage"
+                               translateX="2230"
+                               translateY="1990">
+                            <tooltip>
+                                <Tooltip text="Geschäftskontor der Marsh Refining Company"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="708" onMouseClicked="#loadImage"
+                               translateX="1920"
+                               translateY="2190">
+                            <tooltip>
+                                <Tooltip text="Krämer Wait"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="709" onMouseClicked="#loadImage"
+                               translateX="2890"
+                               translateY="2300">
+                            <tooltip>
+                                <Tooltip text="Erste Unitariergemeinde Innsmouth"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="711" onMouseClicked="#loadImage"
+                               translateX="2720"
+                               translateY="2290">
+                            <tooltip>
+                                <Tooltip text="Redemption Friedhof"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="901" onMouseClicked="#loadImage"
+                               translateX="3270"
+                               translateY="900">
+                            <tooltip>
+                                <Tooltip text="Alter Pier"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="902" onMouseClicked="#loadImage"
+                               translateX="4100"
+                               translateY="1380">
+                            <tooltip>
+                                <Tooltip text="Steinerner Hafendamm"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="904" onMouseClicked="#loadImage"
+                               translateX="3990"
+                               translateY="1550">
+                            <tooltip>
+                                <Tooltip text="Alter Leuchtturm"/>
+                            </tooltip>
+                        </Label>
+                        <Label text="905" onMouseClicked="#loadImage"
+                               translateX="3160"
+                               translateY="1220">
+                            <tooltip>
+                                <Tooltip text="Zollhaus"/>
+                            </tooltip>
+                        </Label>
+                    </Group>
+                </StackPane>
+            </Group>
+        </content>
+    </ScrollPane>
+    <ComboBox fx:id="cmbPlaces" promptText="Gehe zu Platz" onAction="#gotToPlace" maxWidth="200">
+    </ComboBox>
+</Group>
+

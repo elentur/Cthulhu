@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import view.*?>
+<VBox fx:id="vbxCreateCharacter" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.CreateCharacterController">
+    <TitledPane text="Neuer Spieler-/ Nicht-Spieler Character">
+        <HBox spacing="10">
+            <ComboBox promptText="wähle PC" fx:id="cmbCCAllPC">
+                <converter>
+                    <CharacterStringConverter/>
+                </converter>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#newPC">
+                <tooltip>
+                    <Tooltip text="Neuen Spieler-Charakter erstellen"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="/icons/1471206513_add_user.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <ComboBox promptText="wähle NPC" fx:id="cmbCCAllNPC">
+                <converter>
+                    <CharacterStringConverter/>
+                </converter>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#newNPC">
+                <tooltip>
+                    <Tooltip text="Neuen Nicht-Spieler-Charakter erstellen"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="/icons/1471206513_add_user.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button mnemonicParsing="false"
+                    onAction="#newCharacterImage">
+                <tooltip>
+                    <Tooltip text="Neues Charakterbild"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="/icons/1471297278_pictures.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button mnemonicParsing="false"
+                    onAction="#saveCharacter">
+                <tooltip>
+                    <Tooltip text="Ausgewählten Character speichern"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="/icons/1471206499_save.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button mnemonicParsing="false"
+                    onAction="#deleteCharacter">
+                <tooltip>
+                    <Tooltip text="Ausgewählten Character löschen"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="/icons/1471206509_trash.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </TitledPane>
+    <TitledPane fx:id="tlpCCCharacterOptions">
+        <VBox>
+            <HBox minHeight="250" maxHeight="250">
+                <HorizontalTitledPane text="Bild">
+                    <center>
+
+                        <ImageView fx:id="imgCCCharacter" pickOnBounds="true"
+                                   preserveRatio="true" fitWidth="150"/>
+
+
+                    </center>
+                </HorizontalTitledPane>
+                <HorizontalTitledPane text="Allgemein">
+                    <center>
+                        <VBox spacing="10">
+                            <TableView fx:id="tblCommon" editable="true">
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                </columnResizePolicy>
+                                <columns>
+                                    <TableColumn text="Name"
+                                                 editable="false">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="name"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                    <TableColumn editable="true" text="Wert">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="value"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </center>
+                </HorizontalTitledPane>
+                <HorizontalTitledPane text="Attribute">
+                    <center>
+                        <VBox spacing="10">
+                            <HBox>
+                                <Button mnemonicParsing="false"
+                                        onAction="#randomAttributes">
+                                    <tooltip>
+                                        <Tooltip text="Attribute auswürfeln"/>
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <Image url="/icons/1471206515_dice.png"/>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </HBox>
+                            <TableView editable="true" fx:id="tblAttribute">
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                </columnResizePolicy>
+                                <columns>
+                                    <TableColumn editable="false" text="Name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="name"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                    <TableColumn editable="true" text="Wert">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="value"/>
+
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </center>
+                </HorizontalTitledPane>
+                <HorizontalTitledPane text="Punkte">
+                    <center>
+                        <VBox spacing="10">
+                            <TableView editable="true" fx:id="tblPoints">
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                </columnResizePolicy>
+                                <columns>
+                                    <TableColumn editable="false" text="Name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="name"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                    <TableColumn editable="true" text="Wert">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="bonus"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </center>
+                </HorizontalTitledPane>
+                <HorizontalTitledPane text="Fertigkeiten">
+                    <center>
+                        <VBox spacing="10">
+                            <HBox spacing="10">
+                                <Button mnemonicParsing="false"
+                                        onAction="#addAbility">
+                                    <tooltip>
+                                        <Tooltip text="Fertigkeit hinzufügen"/>
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <Image url="/icons/1471297274_plus.png"/>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button mnemonicParsing="false"
+                                        onAction="#removeAbility">
+                                    <tooltip>
+                                        <Tooltip text="Eigene Fertigkeit löschen"/>
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <Image url="/icons/1471297276_minus.png"/>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </HBox>
+
+                            <TableView editable="true" fx:id="tblAbilities">
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                </columnResizePolicy>
+                                <columns>
+                                    <TableColumn editable="false" text="Name"
+                                                 fx:id="tbcAbilitiesName">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="name"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                    <TableColumn editable="true" text="Wert">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="value"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </center>
+                </HorizontalTitledPane>
+                <HorizontalTitledPane text="Waffenfertigkeiten">
+                    <center>
+                        <VBox spacing="10">
+                            <HBox spacing="10">
+                                <Button mnemonicParsing="false"
+                                        onAction="#addWeaponAbility">
+                                    <tooltip>
+                                        <Tooltip text="Fertigkeit hinzufügen"/>
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <Image url="/icons/1471297274_plus.png"/>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button mnemonicParsing="false"
+                                        onAction="#removeWeaponAbility">
+                                    <tooltip>
+                                        <Tooltip text="Eigene Fertigkeit löschen"/>
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <Image url="/icons/1471297276_minus.png"/>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </HBox>
+                            <TableView editable="true" fx:id="tblWeaponAbilities">
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                </columnResizePolicy>
+                                <columns>
+                                    <TableColumn editable="false" text="Name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="name"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                    <TableColumn editable="true" text="Wert">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="value"/>
+                                        </cellValueFactory>
+                                        <cellFactory>
+                                            <FormattedTextFieldTableCell/>
+                                        </cellFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </center>
+                </HorizontalTitledPane>
+            </HBox>
+            <HBox fx:id="vbxSpecifics">
+                <HorizontalTitledPane text="Beschreibung">
+                    <center>
+                        <TextArea fx:id="txtCCDescription" promptText="Beschreibung"
+                                  wrapText="true"
+                                  onKeyTyped="#onCCTextAreaChanged"/>
+                    </center>
+                </HorizontalTitledPane>
+                <HBox fx:id="vbxPCSpecifics">
+                    <HorizontalTitledPane text="Glaube/Weltsicht" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCIdeology" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+
+                    <HorizontalTitledPane text="Wichtige Personen" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCPersons" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                    <HorizontalTitledPane text="Bedeutsame Orte" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCPlaces" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                    <HorizontalTitledPane text="Gehüteter Besitz" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCTreasures" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                    <HorizontalTitledPane text="Wesenszüge" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCTraits" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+
+                    <HorizontalTitledPane text="Verletzungen &amp; Narben" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCInjuries" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                    <HorizontalTitledPane text="Phobier &amp; Verhaltenstörungen" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCPhobics" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+
+                    <HorizontalTitledPane text="Bücher, Zauber &amp; Artefakte" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCTomes" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                    <HorizontalTitledPane text="Begegnungen mit Wesen" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCEncounters" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+
+                    <HorizontalTitledPane text="Ausrüstung und Besitz" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCPossessions" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                    <HorizontalTitledPane text="Geld &amp; Anlagenbesitz" closed="true">
+                        <center>
+                            <TextArea fx:id="txtCCCash" promptText="Beschreibung"
+                                      wrapText="true"
+                                      onKeyTyped="#onCCTextAreaChanged"/>
+                        </center>
+                    </HorizontalTitledPane>
+                </HBox>
+
+            </HBox>
+        </VBox>
+    </TitledPane>
+</VBox>

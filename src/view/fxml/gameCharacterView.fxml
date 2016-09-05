@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import view.APropertyListCell?>
+<?import javafx.scene.web.WebView?>
+<TitledPane fx:id="tlpGameCharacter" visible="false"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameCharacterController">
+    <HBox spacing="10">
+        <VBox maxWidth="100">
+            <VBox minHeight="50" maxHeight="50" alignment="CENTER">
+                <ImageView fx:id="imgGameCharacter"
+                           pickOnBounds="true"
+                           preserveRatio="true" fitHeight="50"
+                           onMouseClicked="#openFullScreenImage">
+                </ImageView>
+            </VBox>
+            <Label text="Punkte"/>
+            <ListView fx:id="lstPoints">
+                <cellFactory>
+                    <APropertyListCell/>
+                </cellFactory>
+            </ListView>
+        </VBox>
+        <VBox maxWidth="120">
+            <Label text="Attribute"/>
+            <ListView fx:id="lstAttributes" onMouseClicked="#rollOnAttribute">
+                <cellFactory>
+                    <APropertyListCell/>
+                </cellFactory>
+            </ListView>
+        </VBox>
+        <VBox>
+            <Label text="Fertigkeiten"/>
+            <ListView fx:id="lstAbilities" onMouseClicked="#rollOnAttribute">
+                <cellFactory>
+                    <APropertyListCell/>
+                </cellFactory>
+            </ListView>
+        </VBox>
+        <VBox>
+            <Label text="Waffenfertigkeiten"/>
+            <ListView fx:id="lstWeaponAbilities" onMouseClicked="#rollOnAttribute">
+                <cellFactory>
+                    <APropertyListCell/>
+                </cellFactory>
+            </ListView>
+        </VBox>
+        <VBox>
+            <Label text="Beschreibung"/>
+            <WebView  fx:id="webGameCharacter" maxWidth="300"/>
+        </VBox>
+    </HBox>
+</TitledPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import view.DataFileStringConverter?>
+<?import view.MusicPlayer?>
+<?import view.SoundPlayerListCell?>
+<VBox spacing="10" minWidth="200" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AudioMusicController">
+    <TitledPane text="Musik">
+        <VBox spacing="5">
+            <ComboBox fx:id="cmbGameMusic" promptText="Musik auswählen" onAction="#setUpMusic">
+                <converter>
+                    <DataFileStringConverter/>
+                </converter>
+            </ComboBox>
+            <MusicPlayer fx:id="sdpMusic"/>
+        </VBox>
+    </TitledPane>
+    <TitledPane text="Soundeffekte">
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <ComboBox fx:id="cmbGameSound" promptText="Sound auswählen">
+                    <converter>
+                        <DataFileStringConverter/>
+                    </converter>
+                </ComboBox>
+                <Button onAction="#addSound">
+                    <tooltip>
+                        <Tooltip text="Sound hinzufügen"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/1471297274_plus.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+            <ListView fx:id="lstSounds">
+                <cellFactory>
+                    <SoundPlayerListCell/>
+                </cellFactory>
+            </ListView>
+        </VBox>
+    </TitledPane>
+</VBox>

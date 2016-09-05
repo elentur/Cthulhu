@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<TabPane prefHeight="535.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:id="root" stylesheets="/css/rootStyle.css">
+
+    <Tab closable="false" text="Spiel">
+        <HBox spacing="10">
+            <padding>
+                <Insets top="5" left="5" bottom="5" right="5"/>
+            </padding>
+            <fx:include source="audioMusicView.fxml"/>
+            <VBox fx:id="vbxScenario" spacing="0">
+                <fx:include source="diceRulesView.fxml"/>
+                <fx:include source="gameScenarioLocationView.fxml"/>
+                <fx:include source="gameCharacterView.fxml"/>
+            </VBox>
+        </HBox>
+    </Tab>
+    <Tab closable="false" text="Neues Szenario/ Neuer Charakter">
+        <HBox spacing="10">
+            <padding>
+                <Insets top="5" left="5" bottom="5" right="5"/>
+            </padding>
+            <fx:include source="createScenarioView.fxml"/>
+            <fx:include source="createCharacterView.fxml"/>
+        </HBox>
+
+
+    </Tab>
+</TabPane>

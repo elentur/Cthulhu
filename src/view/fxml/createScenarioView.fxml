@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import view.CharacterStringConverter?>
+<?import view.LocationStringConverter?>
+<?import view.ScenarioStringConverter?>
+<?import view.EditorTextField?>
+<VBox fx:id="vbxCreateScenario" spacing="0"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateScenarioController">
+    <TitledPane text="Szenario">
+        <HBox spacing="10">
+            <ComboBox fx:id="cmbCSChooseScenario" promptText="Wähle Szenario"
+                      onAction="#setUpScenario">
+                <tooltip>
+                    <Tooltip text="Szenarioauswahl"/>
+                </tooltip>
+                <converter>
+                    <ScenarioStringConverter/>
+                </converter>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#newScenario">
+                <tooltip>
+                    <Tooltip text="Neues Szenario erstellen"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="/icons/1471206506_add_list.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteScenario">
+                <tooltip>
+                    <Tooltip text="Ausgewähltes Szenario löschen"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="/icons/1471206509_trash.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#saveScenario">
+                <tooltip>
+                    <Tooltip text="Ausgewähltes Szenario speichern"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="/icons/1471206499_save.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </TitledPane>
+    <VBox fx:id="vbxCSScenarioOptions" spacing="0">
+        <TitledPane text="Charaktere">
+            <HBox spacing="10">
+                <ComboBox fx:id="cmbCSPC" promptText="Alle Charactere">
+                    <tooltip>
+                        <Tooltip text="Spieler-Charakterauswahl"/>
+                    </tooltip>
+                    <converter>
+                        <CharacterStringConverter/>
+                    </converter>
+                </ComboBox>
+                <ComboBox fx:id="cmbCSNPC" promptText="Alle NPCs">
+                    <tooltip>
+                        <Tooltip text="Nicht-Spieler-Charakterauswahl"/>
+                    </tooltip>
+                    <converter>
+                        <CharacterStringConverter/>
+                    </converter>
+                </ComboBox>
+                <Button mnemonicParsing="false" onAction="#addCharacter">
+                    <tooltip>
+                        <Tooltip text="Ausgewählten PC oder NPC von der rechten Seite hinzufügen"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="/icons/1471297279_arrow.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#removeCharacter">
+                    <tooltip>
+                        <Tooltip text="Ausgewählten PC oder NPC von der linken Seite entfernen"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="/icons/1471206509_trash.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </TitledPane>
+        <TitledPane text="Locations">
+            <HBox spacing="10">
+                <ComboBox fx:id="cmbCSChooseLocation" promptText="wähle Location"
+                          onAction="#setUpLocation">
+                    <tooltip>
+                        <Tooltip text="Locationauswahl"/>
+                    </tooltip>
+                    <converter>
+                        <LocationStringConverter/>
+                    </converter>
+                </ComboBox>
+                <Button mnemonicParsing="false"
+                        onAction="#newLocation">
+                    <tooltip>
+                        <Tooltip text="Neue Location erstellen"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="/icons/1471206506_add_list.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false"
+                        onAction="#deleteLocation">
+                    <tooltip>
+                        <Tooltip text="Ausgewählte Location löschen"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="/icons/1471206509_trash.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </TitledPane>
+        <TitledPane fx:id="tlpCSLocationOptions" text="Location Eigenschaften">
+            <VBox spacing="10">
+                <Label text="Beschreibung:"/>
+              <!--  <TextArea fx:id="txtCSDescription" promptText="Beschreibung"
+                          wrapText="true"
+                          onKeyReleased="#onCSLOcationDescriptionChanged"/>-->
+                <EditorTextField fx:id="txtCSDescription"
+                          onKeyReleased="#onCSLOcationDescriptionChanged"/>
+                <TitledPane text="Bilder" expanded="false">
+                <HBox prefHeight="100.0" prefWidth="200.0" alignment="CENTER" spacing="10" >
+                    <Button mnemonicParsing="false"
+                            onAction="#previousImage" prefHeight="100">
+                        <tooltip >
+                            <Tooltip text="Vorheriges Bild" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                       preserveRatio="true">
+                                <Image url="/icons/1471298683_left_circular.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <VBox spacing="10">
+                        <HBox spacing="10">
+                            <Button mnemonicParsing="false"
+                                    onAction="#newImage">
+                                <tooltip>
+                                    <Tooltip text="Neues Bild"/>
+                                </tooltip>
+                                <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                               preserveRatio="true">
+                                        <Image url="/icons/1471297278_pictures.png"/>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Button mnemonicParsing="false"
+                                    onAction="#deleteImage">
+                                <tooltip>
+                                    <Tooltip text="Bild löschen"/>
+                                </tooltip>
+                                <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                               preserveRatio="true">
+                                        <Image url="/icons/1471206509_trash.png"/>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+
+                        </HBox>
+                        <ImageView fx:id="imgCSLocation" pickOnBounds="true"
+                                   preserveRatio="true" fitWidth="300"
+                                   onMouseClicked="#openFullScreenImage"/>
+                    </VBox>
+                    <Button mnemonicParsing="false"
+                            onAction="#nextImage" prefHeight="100">
+                        <tooltip>
+                            <Tooltip text="Nächstes Bild"/>
+                        </tooltip>
+                        <graphic>
+                            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                       preserveRatio="true">
+                                <Image url="/icons/1471298703_right_circular.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+                </TitledPane>
+            </VBox>
+        </TitledPane>
+    </VBox>
+</VBox>

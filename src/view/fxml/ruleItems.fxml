@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.*?>
+<FXCollections fx:factory="observableArrayList" xmlns:fx="http://javafx.com/fxml/1">
+    <String fx:value="PROBEN-FERTIGKEITENWÜRFE
+    &#10;1 = Kritischer Erfolg
+    &#10;96(bei wert &lt;50) = Patzer
+    &#10;100 = Patzer
+    &#10;Bei Probe auf mehrere Fertigkeiten, nur ein Wurf. SL entscheidet ob in allen oder nur in einer Fertigkeit ein Erfolg notwendig ist."
+    />
+    <String fx:value="PROBEN-KOOPERATIVE PROBEN
+    &#10;Jeder Spieler würfelt, wobei der SL entscheidet ob einer oder alle einen Erfolg brauchen.
+    &#10;Maximaler Gegenwert einer Probe ist 100 + Fertigkeit des Characters. Bei mehreren beteiligten wird immer die Fertigkeit des nächst schwächsten abgezogen, solange bis der wert &lt;=100 ist."
+    />
+    <String fx:value="PROBEN-GLÜCK
+    &#10;Glückswurf, wenn Situation auserhalb des Einflusses der Charactere. Bei mehreren Beteiligten, würft der mit dem niedrigsten Wert.
+    &#10;Bei einer 1 darf für die Mana Erhöhung ein Häckchen gesetzt werden."
+    />
+    <String fx:value="PROBEN-KRÄFTEMESSEN
+    &#10;Beide Parteien werfen auf die Betreffende Fertigkeit. Die Höhere Erfolgsstufe gewinnt. Bei unentschieden gewinnt der höhere Fertigkeitswert."
+    />
+    <String fx:value="GS-GEISTIGE STABILITÄT
+&#10;Die geistige Stabilität eines Charakters wird durch die Anzahl seiner Stabilitätspunkte (0-99) ausgedrückt. Diese schwanken im Laufe des Spieles stark und werden in der Regel weniger als mehr. Die Schrecken des Mythos und anderer Begegnungen verursachen Stabilitätsproben und führen häufig zum Verlust von geistiger Stabilität. Die maximale Anzahl an Stabilitätspunkten liegt bei 99 minus dem Wert in Cthulhu-Mythos.
+&#10;Es werden drei Grade von Wahnsinn unterschieden.
+&#10;Temporäres Trauma – Verlust von fünf oder mehr Stabilitätspunkten auf einmal und Scheitern der Intelligenzprobe.
+&#10;Geistige Umnachtung – Verlust von 1/5 Stabilitätspunkten an einem Tag.
+&#10;Permanenter Wahnsinn – Verlust aller Stabilitätspunkte."/>
+    <String fx:value="GS-TEMPORÄRES TRAUMA
+    &#10;Verliert ein Investigator fünf oder mehr Stabilitätspunkte auf einmal, so wird eine Probe auf Intelligenz notwendig. Ist diese erfolgreich, so realisiert der Charakter das wahre Ausmaß des Schreckens und verliert vorübergehend den Verstand. Dieses Trauma dauert 1W10 Stunden."
+    />
+    <String fx:value="GS-GEISTIGE UMNACHTUNG
+    &#10;Bei dem Verlust von 1/5 seiner Stabilitätspunkte an einem Tag erleidet der Charakter eine geistige Umnachtung. Diese dauert so lange an, bis sie geheilt wurde."
+    />
+    <String fx:value="GS-PERMANENTER WAHNSINN
+    &#10;Bei Erreichen von 0 Stabilitätspunkten ist der Charakter endgültig dem Wahnsinn verfallen. In den allermeisten Fällen ist dies das Ende des Charakterlebens und das Charakterblatt wird oftmals dem Spielleiter übergeben."
+    />
+    <String fx:value="GS-PHASEN DES WAHNSINNS
+    &#10;Das temporäre Trauma und die geistige Umnachtung folgen drei Phasen.
+    &#10;Anfall von Wahnsinn – Kontrollverlust des Spielers über seinen Charakter.
+    &#10;Unterschwelliger Wahnsinn – Anfällig sein für Wahnvorstellungen, Phobien und erneuten Anfällen.
+    &#10;Erholung – Überwinden des Wahnsinns."
+    />
+    <String fx:value="GS-ANFALL VON WAHNSINN
+    &#10;In einem Anfall von Wahnsinn erleidet der Spieler einen Kontrollverlust über seinen Charakter, der je nach Spielsituation entweder 1W10 Kampfrunden (ausgespielt) oder aber 1W10 Stunden (erzählerisch zusammengefasst) dauert. Während dieser Phase kann ein Investigator keine weitere Stabilität verlieren. Danach erhält der Spieler wieder die volle Kontrolle über seinen Charakter zurück und kann normal handeln.
+    &#10;Es ist möglich, dass sich Elemente der Hintergrundgeschichte eines Charakters während dieser Zeit verändern und dadurch dessen durch Wahnsinn hervorgerufene Veränderung widerspiegeln. Des Weiteren ist das Auftreten einer Phobie, Manie oder anderen negativen Dingen sehr wahrscheinlich. Insbesondere kann ein Charakter Wahnvorstellungen präsentiert bekommen und er dadurch nicht mehr unterscheiden, was Realität ist und was nicht. Mit einer gelungenen Stabilitätsprobe kann ein Charakter hinter eine solche Wahnvorstellung blicken."
+    />
+    <String fx:value="GS-UNTERSCHWELLIGER WAHNSINN
+    &#10;Nach einem Anfall verhält sich ein Charakter wieder normal, wobei Aspekte des zuvor erlebten Traumas oder der Umnachtung rollenspieltechnisch Einzug in die Charakterrolle finden können. Jeder weitere Verlust von geistiger Stabilität während der Phase von unterschwelligem Wahnsinn resultiert in einem erneuten Anfall von Wahnsinn mit entsprechender Dauer."
+    />
+    <String fx:value="GS-ERHOLUNG
+    &#10;Ein temporäres Trauma verschwindet von selbst; geruhsamer Schlaf ist mit Sicherheit ein gutes Mittel dagegen. Eine geistige Umnachtung muss behandelt werden. Dies kann entweder zu Hause mit entsprechender Hilfe oder in einer professionellen Einrichtung erfolgen."
+    />
+    <String fx:value="GS-WAHNSINN UND CTHULHU-MYTHOS
+    &#10;Wird ein Anfall von Wahnsinn durch den Mythos hervorgerufen, so erhöht sich die Fertigkeit Cthulhu-Mythos um fünf Punkte, ab dem zweiten mal dann um jeweils einen Punkt."
+    />
+    <String fx:value="GS-ABGESTUMPFT SEIN
+    &#10;Der Verlust geistiger Stabilität durch Mythoswesen wird für jede Wesenheit dokumentiert. Der Gesamtverlust kann den maximal möglichen Stabilitätsverlust des Wesens nicht überschreiten. Pro Charakterentwicklungsphase wird der notierte Wert um eins reduziert."
+    />
+    <String fx:value="KAMPF
+    &#10;Kampf findet rundenweise statt, wobei eine Kampfrunde keine exakte Zeitdauer besitzt. Sie ist so lange, wie ein Teilnehmer für eine normale und angemessene Aktion benötigt. Die Handlungsreihenfolge wird nach absteigender Geschicklichkeit aller im Kampf befindlichen Akteure bestimmt.
+    &#10;Als Aktionen in einer Runde kommen in Frage:
+    &#10;Einen Angriff mittels entsprechender Nah- oder Fernkampffertigkeit durchführen.
+    &#10;Ein Kampfmanöver durchführen.
+    &#10;Aus dem Kampf fliehen.
+    &#10;Einen Zauberspruch wirken.
+    &#10;Eine andere Tätigkeit durchführen.
+    &#10;Ein Charakter kann seine Handlung verzögern, um nach der Aktion eines anderen Teilnehmers zu handeln."
+    />
+    <String fx:value="KAMPF-BEWEGUNG
+    &#10;Bewegt sich ein Charakter nur bis zu seiner Bewegungsweite, so kann er normal einen Nahkampfangriff durchführen. Maximal kann er sich in einer Kampfrunde so weit wie seine Bewegungsweite x 5 Meter bewegen und dabei am Ende der Runde noch einen Nahkampfangriff durchführen."
+    />
+    <String fx:value="KAMPF-NAHKAMPF
+    &#10;Wie Kräftemessen. Wenn der Verteidiger ausweicht nimmt er nur schaden, wenn der Angreifer eine höhere Erfolgstufe erreicht hat.
+    &#10;Schlägt der Verteidiger zurück,erleidert er immer Schaden, außer seine Erfolgstufe ist höher, dann erleidet der Angreifer Schaden.
+    &#10;Erzielt ein Angreifer, während er regulär gemäß seiner Geschicklichkeit handelt, bei seiner Attacke einen extremen Erfolg (Wurf ≤ 1/5 Zielwert), so verursacht er erhöhten Schaden.
+    &#10;Waffentyp(Stumpf)= Maximaler Schaden + maximaler Schadensbonus.
+    &#10;Waffentyp(Spitz oder Kugel) = Maximaler Schaden + maximaler Schadensbonus + zusätzlicher Schadenswürfel der Waffe."
+    />
+    <String fx:value="KAMPF-IMPROVISIERTE WAFFEN
+    &#10;Alle Waffen, die nicht in eine andere Kategorie fallen, gelten als improvisierte Waffen und werden über Nahkampf (Handgemenge) geführt."
+    />
+    <String fx:value="KAMPF-KAMPFMANÖVER
+    &#10;Aktionen, die keinen regulären Schaden hervorrufen, sondern bspw. den Gegner entwaffnen oder ihn wegstoßen sollen, werden als Kampfmanöver bezeichnet. Hierbei spielt die Statur beider Kontrahenten eine Rolle.
+    &#10;Wenn Statur des Angreifers &lt;=3 Manöver unmöglich.
+    &#10;bei 2 gibt es 2 Strafwürfel bei 1 gibt es einen Strafwürfel, sonst gibt es keine Extrawürfel.
+    &#10;Anschließend werfen beide Kontrahenten die entsprechenden Fertigkeiten- oder Attributswürfe, zumeist wohl Nahkampf (Handgemenge). Anstatt Schaden zu verursachen, gelingt dem Angreifer sein zuvor genanntes Ziel, sofern er erfolgreich ist. Ein zurückschlagender Verteidiger verursacht normal Schaden, sollte sein Wurf ein besseres Ergebnis erzielt haben. Ebenso ist es möglich, dass sich ein Verteidiger anstatt zurück zu schlagen ebenfalls für ein Kampfmanöver entscheidet. In diesem Fall tritt statt des Schadens der gewünschte Effekt ein."
+    />
+    <String fx:value="KAMPF-ÜBERZAHL
+    &#10;Ein Verteidiger, der sich einer Überzahl an Gegner ausgesetzt sieht und in der laufenden Runde bereits ausgewichen ist oder zurückgeschlagen hat, befindet sich im Nachteil. Alle Angreifer erhalten einen Bonuswürfel für Nahkampfangriffe gegen ihn."
+    />
+    <String fx:value="KAMPF-ÜBERRASCHUNGSANGRIFFE
+    &#10;Bei einem Überaschungsangriff gibt es keine Gegenreaktion des Verteidigers. In einer Situation, in der es zu einem Überraschungsangriff kommen kann, steht dem Angegriffenen möglicherweise ein Wurf auf Hören, Verborgenes erkennen oder Psychologie zu. Bei Erfolg kann dieser sich normal verteidigen."
+    />
+    <String fx:value="KAMPF-WURFWAFFEN
+    &#10;Einer geworfenen Waffe kann ausgewichen werden. Sofern der Verteidiger in einer Distanz von unter 1/5 seiner Geschicklichkeit in Fuß (3 Fuß entsprechen ungefähr einem Meter) zum Angreifer steht, kann er auch zurückschlagen. Bei Wurfwaffen und anderen muskelbetriebenen Waffen wie bspw. einem Bogen, wird die Hälfte des Schadensbonus des Angreifers auf den Schaden hinzugerechnet."
+    />
+    <String fx:value="KAMPF-FLUCHT
+    &#10;Sofern es dem Charakter möglich ist, kann er sich in seiner Aktion vom Gegner lösen und aus dem Kampf fliehen."
+    />
+    <String fx:value="KAMPF-RÜSTUNG
+    &#10;Der Wert der Rüstung wird von dem verursachten Schaden abgezogen. Dies gilt nicht für magischen Schaden, Gifte, usw."
+    />
+    <String fx:value="KAMPF-FERNKAMPF
+    &#10;Fernkampfangriffe werden nicht mittels Kräftemessen durchgeführt. Stattdessen würfelt der Angreifer eine normale Probe auf die entsprechende Fernkampffertigkeit. Einem Schuss kann man weder ausweichen noch kann man zurückschlagen (Ausnahme: aus nächster Nähe).
+    &#10;Die Schwierigkeit bestimmt sich dabei durch die Entfernung zum Ziel.
+    &#10;Basisreichweite = regulär
+    &#10;weit (2x Basisreichweite)=schwer
+    &#10;sehr weit (4x Basisreichweite)=extrem (Durchbohren nur bei kritischem Erfolg)
+    &#10;Hält ein Charakter eine schussbereite Waffe in der Hand, so handelt er bei seiner Geschicklichkeit + 50 in der Runde."
+    />
+    <String fx:value="KAMPF-IN DECKUNG WERFEN
+    &#10;Ein Verteidiger, der den Angriff kommen sieht, kann sich mit Ausweichen in Deckung werfen. Der Angreifer erhält dann einen Strafwürfel und der Verteidiger verliert seine nächste Aktion."
+    />
+    <String fx:value="KAMPF-DECKUNG
+    &#10;Wenn die Hälfte oder mehr des Verteidigers hinter Deckung verborgen ist, erhält der Angreifer einen Strafwürfel."
+    />
+    <String fx:value="KAMPF-AUS NÄCHSTER NÄHE
+    &#10;Ein Angreifer, der sich in einer Distanz von unter 1/5 seiner Geschicklichkeit in Fuß (3 Fuß entsprechen ungefähr einem Meter) zum Verteidiger befindet, erhält einen Bonuswürfel."
+    />
+    <String fx:value="KAMPF-ZIELEN
+    &#10;Zielt der Angreifer eine Runde lang und steht dabei still, so erhält er in der nächsten Runde einen Bonuswürfel."
+    />
+    <String fx:value="KAMPF-SICH SCHNELL BEWEGENDE ZIELE
+    &#10;Ziele, die sich schnell bewegen (Bewegung 8 und mehr), sind schwieriger zu treffen. Der Angreifer erhält einen Strafwürfel."
+    />
+    <String fx:value="KAMPF-GRÖSSE DES ZIELS
+    &#10;Statur ≤ -2 = 1 Strafwürfel
+    &#10;Statur ≥ 4 =	1 Bonuswürfel"
+    />
+    <String fx:value="KAMPF-NACHLADEN
+    &#10;In einer Kampfrunde können zwei Patronen nachgeladen bzw. ein Magazin gewechselt werden. Ein MG-Gurt benötigt zwei Runden. Eine Patrone nachzuladen und danach einen Schuss abzugeben führt zu einem Strafwürfel."
+    />
+    <String fx:value="KAMPF-FEUERSTOS
+    &#10;Ein Feuerstoß von zwei oder drei Schuss wird mit einem Strafwürfel versehen. Dabei wird jeder einzelne Schuss separat ausgewürfelt."
+    />
+    <String fx:value="KAMPF-DAUERFEUER
+    &#10;Bei Dauerfeuer werden die Schüsse in Salven abgegeben. Die Anzahl an Projektilen pro Salve liegt bei mindestens drei und maximal so vielen, wie die Zehnerstelle der Fernkampffertigkeit beträgt. Es kann so lange pro Runde geschossen werden, wie sich Patronen im Magazin befinden.
+    &#10;Jede einzelne Salve wird separat gewürfelt. Ab der zweiten Salve und mit jeder weiteren erhält der Angreifer einen Strafwürfel dazu. Sollte die Anzahl der Strafwürfel auf drei steigen, so bleibt es bei zwei Strafwürfeln und stattdessen steigt die Schwierigkeit der Probe um eine Erfolgsstufe.
+    &#10;Beim Wechsel von Zielen während des Schießen, wird zusätzliche Munition in Höhe vom Abstand der beiden Ziele zueinander in Metern verbraucht. Es können beliebig viele Ziele bekämpft werden, solange Munition vorhanden ist und diese sich vor dem Schützen befinden.
+    &#10;Wenn der Angriffswurf erfolgreich ist, treffen die Hälfte der Projektile einer Salve das Ziel (abgerundet, aber mindestens eins). Wenn der Angriffswurf ein extremer Erfolg ist, treffen alle Kugeln das Ziel, wobei die erste Hälfte das Ziel durchbohrt (abgerundet, aber mindestens eine). Sofern die Schwierigkeit bereits einen extremen Erfolg notwendig gemacht hat, findet kein Durchbohren statt."
+    />
+    <String fx:value="KAMPF-SCHIESSEN IN DEN NAHKAMPF
+    &#10;Befindet sich das Ziel in einem Nahkampf mit anderen, so erhält der Angreifer einen Strafwürfel. Bei einem Patzer wird ein befreundeter Charakter getroffen, bei mehreren ist es derjenige mit dem niedrigsten Glückswert."
+    />
+    <String fx:value="KAMPF-FEHLFUNKTION
+    &#10;Würfelt der Angreifer gleich oder über den Fehlfunktionswert der Waffe, so klemmt die Waffe oder die Patrone ist ein Blindgänger. Bei einer Automatikwaffe, also bspw. keinem Revolver oder Schrotflinte zum Aufklappen, dauert das Beheben der Fehlfunktion 1W6 Runden und erfordert eine erfolgreiche Mechanische Reparatur oder die entsprechende Fernkampffertigkeit."
+    />
+    <String fx:value="GESUNDHEIT
+    &#10;Die physische Verfassung eines Charakters wird durch die Anzahl seiner Trefferpunkte ausgedrückt. Fallen diese auf 0, so wird der Charakter bewusstlos. Hatte der Charakter zuvor bereits eine schwere Wunde hinnehmen müssen, so droht er mit 0 Trefferpunkten zu sterben.
+    &#10;Eine schwere Wunde erhält ein Charakter dann, wenn er auf einmal gleich oder mehr Schaden als die Hälfte seiner maximalen Trefferpunkte erleidet. Mit einer schweren Wunde geht man zu Boden und muss eine Probe auf Konstitution ablegen, um nicht bewusstlos zu werden.
+    &#10;Einmaliger Schaden, der über die maximale Trefferpunktanzahl hinausgeht, führt zum sofortigen Tod."
+    />
+    <String fx:value="GESUNDHEIT-ERSTE HILFE
+    &#10;Erste Hilfe muss innerhalb der goldenen Stunde nach Eintritt des Schadens erfolgen und gewährt einen Trefferpunkt zurück. Die Anwendung der Fertigkeit Medizin kann auch nach der goldenen Stunde erfolgen und heilt 1W3 Trefferpunkte."
+    />
+    <String fx:value="GESUNDHEIT-IM STERBEN LIEGEN
+    &#10;Ein Charakter, der im Sterben liegt, muss jeweils am Ende jeder Runde eine erfolgreiche Probe auf Konstitution bestehen, andernfalls stirbt er endgültig. Nur mittels Erste Hilfe kann eine Stabilisierung erfolgen, Medizin ist hierfür nicht geeignet. Ein stabilisierter Charakter muss nur noch jeweils einmal in der Stunde eine Probe auf Konstitution ablegen, bei dessen Misserfolg er erneut im Sterben liegt. Während der stabilisierten Phase muss erfolgreich Medizin angewandt werden, um den Zustand endgültig zu festigen. Der Charakter hat dann 0 Trefferpunkte und beginnt seinen Genesungsprozess."
+    />
+    <String fx:value="GESUNDHEIT-GENESUNG
+    &#10;Ohne eine schwere Wunde regeneriert sich ein Trefferpunkt pro Tag.
+    &#10;Mit einer schweren Wunde wird am Ende jeder Woche eine Probe auf Konstitution abgelegt. Bei Erfolg regenerieren sich 1W3 Trefferpunkte, bei einem extremen Erfolg sind es 2W3. Je nach Umgebung können Bonus- oder Strafwürfel notwendig werden.
+    &#10;Die schwere Wunde ist geheilt, wenn entweder ein extremer Erfolg erwürfelt wurde oder die regenerierten Trefferpunkte die Hälfte der maximalen Trefferpunkte erreicht bzw. überschritten haben."
+    />
+    <String fx:value="MAGIE-MAGIEPUNKTE
+    &#10;Zum Wirken von Zaubern oder bspw. dem Benutzen von Artefakten werden Magiepunkte eingesetzt. Sind sie erschöpft, so werden stattdessen Trefferpunkte abgezogen. Magiepunkte regenerieren in aller Regel mit einer Rate von einem Punkt pro Stunde."
+    />
+    <String fx:value="MAGIE-ZAUBER LERNEN
+    &#10;Einen Zauber aus einem Buch zu lernen bedingt es zuvor wenigstens durchgeblättert zu haben. Der Lernprozess dauert typischerweise 2W6 Wochen, der Erfolg kann automatisch eintreten oder aber je nach Situation z.B. eine schwere Probe auf Intelligenz erfordern. Ein Zauber kann auch durch eine andere Person geschult werden, was nur etwa 1W8 Tage benötigt. In seltenen Fällen kann auch ein Mythoswesen selbst einem Charakter zu einem Spruch verhelfen, wobei dieses zumeist keine schöne Erfahrung ist und mit Stabilitätsverlust einhergeht."
+    />
+    <String fx:value="MAGIE-ZAUBER SPRECHEN
+    &#10;Um einen Zauber zu sprechen muss dieser zuvor gelernt worden sein. Beim ersten Mal ist dafür eine schwere Probe auf Mana erforderlich. Ist diese erfolgreich, so treten die Effekte des Zaubers ein. Bei einem Misserfolg besteht die Möglichkeit den Wurf jederzeit zu wiederholen und damit zu forcieren. Misslingt auch dieser Wurf, so tritt der Effekt trotzdem ein, jedoch erleidet der Zauberer negative Konsequenzen. Die Alternative zu einem Forcieren ist den Zauber erneut zu lernen.
+    &#10;Ein misslungener forcierter Wurf kostet 1W6 mal so viele Magiepunkte, Stabilitätspunkte oder Manapunkte wie angegeben. Außerdem können weitere unangenehme Dinge passieren.
+    &#10;Während des Zauberns kann eine Störung der Konzentration zu einem Abbruch mit möglicherweise unangenehmen Konsequenzen führen."
+    />
+    <String fx:value="MAGIE-ERHÖHUNG VON MANA
+    &#10;Wenn ein Zauberspruch mittels eines Kräftemessens gesprochen werden muss, so erhält der Zauberer bei einem Erfolg einen Haken auf das Attribut Mana. Gleiches gilt für alle Glücksproben, bei denen eine 1 gewürfelt wird."
+    />
+    <String fx:value="VERFOLGUNGSJAGDEN
+    &#10;Alle Teilnehmer einer Verfolgungsjagd legen zu Beginn eine Probe auf Konstitution bzw. einer entsprechenden Fertigkeit wie Autofahren ab. Bei einem extremen Erfolg erhöht sich die Bewegungsweite für die Dauer der Verfolgung um eins, bei einem Misserfolg reduziert sie sich um eins.
+    &#10;Sofern die Bewegungsweite der fliehenden Partei größer ist als die der Verfolger, entkommt sie und die Verfolgungsjagd ist beendet.
+    &#10;Die Verfolger werden im Anschluss in der Reihenfolge ihrer Bewegungsweite auf virtuelle Plätze verteilt. Dies kann ganz simpel mit Markern auf einem Zettel dargestellt werden. Dabei liegen jeweils so viele Plätze zwischen ihnen, wie die Differenz ihrer Bewegungsweiten betragen. Der langsamste Verfolger befindet sich somit ganz am Ende, der schnellste ganz am Anfang.
+    &#10;Die fliehende Partei wird ebenfalls in der Reihenfolge ihrer Bewegungsweite zwei Plätze vor dem führenden Verfolger platziert.
+    &#10;Fliehender F1 mit Bewegungsweite 8
+    &#10;Verfolger V1 mit Bewegungsweite 9
+    &#10;Verfolger V2 mit Bewegungsweite 8
+    &#10;(V2)  (V1)  (  )  (F1)
+    &#10;Jeder Teilnehmer an der Verfolgungsjagd erhält nun einen Aktionspunkt. Hinzu kommen so viele weitere Aktionspunkte, wie die Differenz der jeweiligen Bewegungsweite zu der des langsamsten Teilnehmers beträgt.
+    &#10;F1: 1 Aktionspunkt
+    &#10;V1: 2 Aktionspunkte
+    &#10;V2: 1 Aktionspunkt
+    &#10;Die Teilnehmer handeln in der Reihenfolge ihrer Geschicklichkeit genau so wie in Kampfrunden. Folgende Aktionen sind möglich.
+    &#10;Plätze vorrücken.
+    &#10;Einen Angriff (Nahkampf, Fernkampf oder bspw. mittels Autofahren durchführen.
+    &#10;Einen Zauber sprechen.
+    &#10;Eine andere Aktion ausführen.
+    &#10;Wie auch in Kampfrunden kann ein Charakter seine Handlung verzögern, um nach der Aktion eines anderen Teilnehmers zu handeln."
+    />
+    <String fx:value="VERFOLGUNG-BEWEGUNG
+    &#10;Es kostet einen Aktionspunkt, um von einem Platz auf den nächsten vorzurücken."
+    />
+    <String fx:value="VERFOLGUNG-HINDERNISS UND GEFAHREN
+    &#10;Zwischen zwei Plätzen kann ein Hindernis oder eine gefährliche Komplikation liegen. Zumeist werden Fertigkeitenwürfe zur Überwindung einer solchen Stelle erfoderlich sein. So kann bspw. eine im Weg stehende Mauer mittels Klettern überwunden werden. Mittels zusätzlich ausgegebener Aktionspunkte kann ein vorsichtiges Herangehen an das Hindernis geschehen und bis zu zwei Bonuswürfel (entspricht zwei Aktionspunkten) erworben werden.
+    &#10;Sofern ein Fertigkeitenwurf misslingt, kann möglicherweise Schaden an dem Charakter oder bspw. dem für die Verfolgung verwendeten Auto die Folge sein. Außerdem verliert der Teilnehmer 1W3 Aktionspunkte.
+    &#10;Ein Hindernis kann auch die Form einer Barriere annehmen, wenn z.B. eine verschlossene Tür das Weiterkommen nicht nur verlangsamt, sondern gänzlich aufhält. Barrieren müssen zunächst überwunden oder zerstört werden, um das Weiterkommen fortzusetzen."
+    />
+    <String fx:value="VERFOLGUNG-ANGRIFFE
+    &#10;Um einen anderen Teilnehmer anzugreifen, müssen sich Angreifer und Verteidiger auf demselben Platz befinden. Die Ausnahme ist der Einsatz von Fernkampfangriffen, bei denen entsprechend der Situation die Entfernung durch den Spielleiter beurteilt wird. Einen Angriff durchzuführen kostet einen Aktionspunkt, wobei der Angegriffene sich ohne Einsatz eines Aktionspunktes verteidigen kann.
+    &#10;Ein erfolgreiches Kampfmanöver verursacht beim Gegner den Verlust von 1W3 Aktionspunkten und ggf. sogar Schaden."
+    />
+
+
+
+</FXCollections>

@@ -1,0 +1,276 @@
+.root {
+    -fx-base: rgb(50, 50, 50);
+    -fx-background: rgb(80, 80, 80);
+}
+
+/* top right bottom left */
+
+#scrollPaneSettings{
+    -fx-min-width: 26.5em;
+}
+
+#tabPane{
+    -fx-min-width: 25em;
+}
+
+/* Render Setting 2 spaltig */
+
+.setting-group-2{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(60, 60, 60);
+    -fx-alignment: baseline-left;
+    -fx-padding: 1em 0.25em;
+    -fx-spacing: 1em;
+    -fx-pre-width: 25em;
+}
+
+.setting-group-2 .label,
+.setting-group-2 .text-field,
+.setting-group-2 .color-picker,
+.setting-group-2 .combo-box,
+.setting-group-2 .number-text-field,
+.setting-group-2 .text-field-head,
+.setting-group-2 .choice-box,
+.setting-group-2 .button,
+.setting-group-2 .check-box {
+    -fx-pref-width: 12.5em;
+}
+
+.setting-group-2 .col-1{
+    -fx-pref-width: 12.5em !important;
+}
+
+.setting-group-2 .col-2{
+    -fx-pref-width: 25em !important;
+}
+
+/* Render Setting Formular 6 spaltig */
+
+.form-group-6{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(60, 60, 60);
+    -fx-alignment: baseline-left;
+    -fx-padding: 0.69em 0;
+    -fx-spacing: 0.34em;
+    -fx-max-width: 25em;
+}
+
+.form-group-6 .label,
+.form-group-6 .text-field,
+.form-group-6 .color-picker,
+.form-group-6 .combo-box,
+.form-group-6 .number-text-field,
+.form-group-6 .text-field-head{
+    -fx-pref-width: 4.17em;
+}
+
+.form-group-6 .col-1{
+    -fx-pref-width: 4.17em !important;
+}
+
+.form-group-6 .col-2{
+    -fx-pref-width: 8.33em !important;
+}
+
+.form-group-6 .col-3{
+    -fx-pref-width: 12.50em !important;
+}
+
+.form-group-6 .col-4 {
+    -fx-pref-width: 16.66em !important;
+}
+
+.form-group-6 .col-5 {
+    -fx-pref-width: 20.83em !important;
+}
+
+.form-group-6 .col-6 {
+    -fx-pref-width: 25em !important;
+}
+
+/* Setting Formular 5 spaltig */
+
+.form-group-5{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(60, 60, 60);
+    -fx-alignment: baseline-left;
+    -fx-padding: 0.69em 0.34em;
+    -fx-spacing: 0.34em;
+    -fx-max-width: 25em;
+}
+
+.form-group-5 .label,
+.form-group-5 .text-field,
+.form-group-5 .color-picker,
+.form-group-5 .combo-box,
+.form-group-5 .number-text-field,
+.form-group-5 .text-field-head {;
+    -fx-pref-width: 5em;
+}
+
+.form-group-5 .col-1{
+    -fx-pref-width: 5em !important;
+}
+
+.form-group-5 .col-2{
+    -fx-pref-width: 10em !important;
+}
+
+.form-group-5 .col-3{
+    -fx-pref-width: 15em !important;
+}
+
+.form-group-5 .col-4{
+    -fx-pref-width: 20em !important;
+}
+
+.form-group-5 .col-5{
+    -fx-pref-width: 25em !important;
+}
+
+
+/* Setting Formular  4 spaltig */
+
+.form-group-4{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(60, 60, 60);
+    -fx-alignment: baseline-left;
+    -fx-padding: 0.69em 0.34em;
+    -fx-spacing: 0.34em;
+    -fx-max-width: 25em;
+}
+
+.form-group-4 .label,
+.form-group-4 .text-field,
+.form-group-4 .color-picker,
+.form-group-4 .combo-box,
+.form-group-4 .number-text-field,
+.form-group-4 .text-field-head {;
+    -fx-pref-width: 6.25em;
+}
+
+.form-group-4 .col-1{
+    -fx-pref-width: 6.25em !important;
+}
+
+.form-group-4 .col-2{
+    -fx-pref-width: 12.5em !important;
+}
+
+.form-group-4 .col-3{
+    -fx-pref-width: 18.75em !important;
+}
+
+.form-group-4 .col-4{
+    -fx-pref-width: 25em !important;
+}
+
+/* Setting Formular  3 spaltig */
+
+.form-group-3{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(60, 60, 60);
+    -fx-alignment: baseline-left;
+    -fx-padding: 0.34em;
+    -fx-spacing: 0.34em;
+    -fx-max-width: 25em;
+}
+
+.form-group-3 .label,
+.form-group-3 .text-field,
+.form-group-3 .color-picker,
+.form-group-3 .combo-box,
+.form-group-3 .number-text-field,
+.form-group-3 .text-field-head{
+    -fx-pref-width: 8.33em;
+}
+
+.form-group-3 .col-1{
+    -fx-pref-width: 8.33em !important;
+}
+
+.form-group-3 .col-2{
+    -fx-pref-width: 16.66em !important;
+}
+
+.form-group-3 .col-3{
+    -fx-pref-width: 25em !important;
+}
+
+
+/* Setting Formular  2 spaltig */
+
+.form-group-2{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(60, 60, 60);
+    -fx-alignment: baseline-left;
+    -fx-padding: 0.34em;
+    -fx-spacing: 0.34em;
+    -fx-max-width: 25em;
+}
+
+.form-group-2 .label,
+.form-group-2 .text-field,
+.form-group-2 .color-picker,
+.form-group-2 .combo-box,
+.form-group-2 .number-text-field,
+.form-group-2 .text-field-head{
+    -fx-pref-width:  12.5em;
+}
+
+.form-group-2 .col-1{
+    -fx-pref-width: 12.5em !important;
+}
+
+.form-group-2 .col-2{
+    -fx-pref-width: 25em !important;
+}
+
+/* helper classes */
+
+.text-field-head{
+    -fx-alignment: baseline-center;
+}
+
+.element-center{
+    -fx-alignment: baseline-center !important;
+}
+
+.element-right{
+    -fx-alignment: baseline-right !important;
+}
+
+.element-left{
+    -fx-alignment: baseline-left !important;
+}
+
+/* TreeView */
+
+.tree-view{
+    -fx-min-height: 30em;
+}
+
+.tree-cell:selected {
+    -fx-font-weight: bold;
+}
+
+.tree-cell {
+    -fx-padding: 0.25em;
+}
+
+/* Render Settings */
+
+FlowPane{
+    -fx-padding: 0.2em;
+}
+
+.innsmouthMapLabel{
+ -fx-font-size: 18pt;
+ -fx-font-weight: bold;
+}

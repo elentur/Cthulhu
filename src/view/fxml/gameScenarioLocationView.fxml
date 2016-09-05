@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<?import view.CharacterStringConverter?>
+<?import view.LocationStringConverter?>
+<?import view.ScenarioStringConverter?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameScenarioLocationController">
+    <TitledPane text="Szenario/Location und PC/NPC">
+        <HBox spacing="10">
+            <VBox spacing="10" minHeight="200" minWidth="300">
+                <HBox spacing="10">
+                    <VBox spacing="10">
+                        <ComboBox fx:id="cmbGameScenario" promptText="Wähle Scenario"
+                                  onAction="#setUpScenario">
+                            <tooltip>
+                                <Tooltip text="Szenarioauswahl"/>
+                            </tooltip>
+                            <converter>
+                                <ScenarioStringConverter/>
+                            </converter>
+                        </ComboBox>
+                        <ComboBox fx:id="cmbGameLocation" promptText="Wähle Location"
+                                  onAction="#setUpLocation">
+                            <tooltip>
+                                <Tooltip text="Locationauswahl"/>
+                            </tooltip>
+                            <converter>
+                                <LocationStringConverter/>
+                            </converter>
+                        </ComboBox>
+                        <ComboBox fx:id="cmbGameNPCs" promptText="Wähle NPC">
+                            <tooltip>
+                                <Tooltip text="NPC Auswahl"/>
+                            </tooltip>
+                            <converter>
+                                <CharacterStringConverter/>
+                            </converter>
+                        </ComboBox>
+                    </VBox>
+                    <Button text="Innsmouth Karte" wrapText="true" onAction="#showInnsmouthMap"/>
+                </HBox>
+                <ScrollPane fx:id="scpCharacters" minHeight="100">
+
+                </ScrollPane>
+            </VBox>
+            <HBox alignment="CENTER" fx:id="hbxGameLocation" spacing="10">
+                <WebView fx:id="webLocation"/>
+                <Button mnemonicParsing="false"
+                        onAction="#previousImage" prefHeight="100">
+
+                    <tooltip>
+                        <Tooltip text="Vorheriges Bild"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="/icons/1471298683_left_circular.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <ImageView fx:id="imgGameLocation" pickOnBounds="true"
+                           preserveRatio="true" fitWidth="300"
+                           onMouseClicked="#openFullScreenImage"/>
+                <Button mnemonicParsing="false"
+                        onAction="#nextImage" prefHeight="100">
+                    <tooltip>
+                        <Tooltip text="Nächstes Bild"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="/icons/1471298703_right_circular.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </HBox>
+    </TitledPane>
+</HBox>
